@@ -7,50 +7,28 @@ public class Essay {
     /**
      * 标题
      */
-    private String title;
+    public String title;
     /**
      * 写作者
      */
-    private Writer writer;
-    private String text;
+    public Writer writer;
+    /**
+     * 文章正文
+     */
+    public String text;
 
-    private int score;
+    /**
+     * 得分
+     */
+    public int score;
 
+    /**
+     * 长度
+     */
     public int length() {
         return text.length();
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public Writer getWriter() {
-        return writer;
-    }
-
-    public void setWriter(Writer writer) {
-        this.writer = writer;
-    }
-
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
-    }
-
-    public int getScore() {
-        return score;
-    }
-
-    public void setScore(int score) {
-        this.score = score;
-    }
 
     /**
      * 构造一个作文
@@ -63,11 +41,11 @@ public class Essay {
 
     @Override
     public String toString() {
-        return title + "/" + writer.getName() + "/" + text;
+        return title + "/" + writer.name + "/" + text;
     }
 
     public String toString(String split) {
-        return title + split + writer.getName() + split + text;
+        return title + split + writer.name + split + text;
     }
 
 }
