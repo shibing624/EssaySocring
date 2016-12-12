@@ -87,4 +87,7 @@ public class Writer {
     }
 
 
+    public Writer(String name){
+        this.name = name;
+    }
 }
