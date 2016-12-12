@@ -34,11 +34,11 @@ public class EssayTest {
             "另外数据挖掘、互联网搜索算法也成为当今的热门方向。\n" +
             "算法工程师逐渐往人工智能方向发展。";
 
+    public static Essay testEssay = new Essay("算法工程师",new Writer("computer"),text);
     @Test
     public void testString() {
-        Essay essay = new Essay("工程师", new Writer("lili"), text);
-        String str = essay.toString();
-        String splitStr = essay.toString(",");
+        String str = testEssay.toString();
+        String splitStr = testEssay.toString(",");
         Assert.assertTrue(str != null && splitStr != null);
         System.out.println(str);
         System.out.println(splitStr);
