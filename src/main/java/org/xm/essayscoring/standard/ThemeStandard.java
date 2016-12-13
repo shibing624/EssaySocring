@@ -15,6 +15,7 @@ import java.util.Map;
 
 /**
  * 主题一致性标准
+ *
  * @author xuming
  */
 public class ThemeStandard implements Standard {
@@ -37,8 +38,9 @@ public class ThemeStandard implements Standard {
     /**
      * 标题切合正文的得分
      * 通过提取主题短语，比较标题与主题短语相似度
+     *
      * @param title 标题
-     * @param text 正文
+     * @param text  正文
      * @return 得分
      */
     private double getRecommendScore(String title, String text) {
@@ -72,8 +74,9 @@ public class ThemeStandard implements Standard {
 
     /**
      * 标题在正文中词频得分（TF）
+     *
      * @param title 标题
-     * @param text 正文
+     * @param text  正文
      * @return 得分
      */
     private double getTitleFrequencyScore(String title, String text) {

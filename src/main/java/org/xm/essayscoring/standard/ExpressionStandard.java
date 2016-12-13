@@ -12,6 +12,8 @@ import java.util.stream.Collectors;
 
 /**
  * 修辞与表达标准
+ * 成语、俗语等形容词占比
+ *
  * @author xuming
  */
 public class ExpressionStandard implements Standard {
