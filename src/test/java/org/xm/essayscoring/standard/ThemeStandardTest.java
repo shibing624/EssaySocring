@@ -20,10 +20,10 @@ public class ThemeStandardTest {
         Double d = themeStandard.getScore(essay);
         System.out.println(d);
         Assert.assertTrue(d > 0.0);
-        Assert.assertTrue(themeStandard.getFrequencyScore(title,text) > 0.0);
     }
 
 }
+
 //算法工程师是什么=算法=算法工程师 31.3
 //工程师是什么 19.85
 //苹果 0.93
