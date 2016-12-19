@@ -2,39 +2,34 @@ package org.xm.essayscoring;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.xm.essayscoring.domain.EssayInstance;
+
+import java.util.ArrayList;
 
 /**
  * @author xuming
  */
 public class EssayScoring {
-    private static final Logger logger = LoggerFactory.getLogger(EssayScoring.class);
-
-    public static final class Config {
-        /**
-         * 路径
-         */
-        public static String CilinPath = "data/cilin.db.gz";
-        /**
-         * 路径
-         */
-        public static String PinyinPath = "data/F02-GB2312-to-PuTongHua-PinYin.txt";
-        /**
-         * concept路径
-         */
-        public static String ConceptPath = "data/concept.dat";
-        /**
-         * concept.xml.gz路径
-         */
-        public static String ConceptXmlPath = "data/concept.xml.gz";
-        /**
-         * 义原关系的路径
-         */
-        public static String SememePath = "data/sememe.dat";
-        /**
-         * 义原数据路径
-         */
-        public static String SememeXmlPath = "data/sememe.xml.gz";
+    private static final Logger LOG = LoggerFactory.getLogger(EssayScoring.class);
+    public static final boolean DEBUG = true;
+    private static ArrayList<EssayInstance> instances;
+    public static ArrayList<EssayInstance> getInstances() {
+        return instances;
     }
+
+    public static void setInstances(ArrayList<EssayInstance> instances) {
+        EssayScoring.instances = instances;
+    }
+
+
+    /**
+     * 路径
+     */
+    public static String CilinPath = "cilin.db.gz";
+    /**
+     * 路径
+     */
+    public static String PinyinPath = "F02-GB2312-to-PuTongHua-PinYin.txt";
 
     private EssayScoring() {
     }
