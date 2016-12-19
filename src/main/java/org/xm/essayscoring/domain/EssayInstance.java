@@ -154,6 +154,24 @@ public class EssayInstance {
     }
 
     /**
+     * get token(String) from paragraphs
+     *
+     * @return the parsed the paragraph to word levels
+     */
+    public static List<String> getTokens(EssayInstance instance) {
+        List<String> tokens = new ArrayList<>();
+        ArrayList<ArrayList<ArrayList<String>>> paragraphs = instance.getParagraphs();
+        for (ArrayList<ArrayList<String>> paragraph : paragraphs) {
+            for (ArrayList<String> sentence : paragraph) {
+                for (String token : sentence) {
+                    tokens.add(token);
+                }
+            }
+        }
+        return tokens;
+    }
+
+    /**
      * toString
      *
      * @return shows ID and parsed contents
