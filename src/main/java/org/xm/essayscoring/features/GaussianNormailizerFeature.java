@@ -38,7 +38,7 @@ public class GaussianNormailizerFeature implements Features {
         stddev = new HashMap<>();
         this.baseFeature = base;
         this.baseName = baseName;
-        this.name = baseName + "_" + type.toString().toLowerCase() + "_norm_task";
+        this.name = baseName + "_" + type.toString().toLowerCase() + "_gaussiannorm_task";
         this.type = type;
         HashMap<Integer, int[]> docs = new HashMap<>();
         // compute the sums

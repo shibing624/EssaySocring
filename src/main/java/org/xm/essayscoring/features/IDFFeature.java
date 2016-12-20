@@ -15,6 +15,7 @@ public class IDFFeature implements Features {
 
     /**
      * init and compute IDF
+     *
      * @param instances
      */
     public IDFFeature(ArrayList<EssayInstance> instances) {
