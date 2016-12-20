@@ -1,5 +1,10 @@
 package org.xm.essayscoring.domain;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -91,6 +96,14 @@ public class EssayInstance {
         ArrayList<String> fList = new ArrayList<>(features.keySet());
         Collections.sort(fList);
         return fList;
+    }
+
+    public enum BaseName {
+        AverageWordLength,
+        AverageIDF,
+        OOVs,
+        obvious_typos,
+        overlap_coherence
     }
 
     /**
@@ -191,6 +204,21 @@ public class EssayInstance {
             sb.append("\n");
         }
         return sb.toString();
+    }
+
+    /**
+     * print essay instance info
+     * @param instances
+     */
+    public static void printEssayInstances(ArrayList<EssayInstance> instances) {
+        try {
+            PrintWriter out = new PrintWriter(new OutputStreamWriter(new FileOutputStream("data/examples.utf8"), Charset.forName("UTF-8")));
+            for (EssayInstance essay : instances)
+                out.println(essay + "\n");
+            out.close();
+        } catch (IOException e) {
+            System.err.println("Failure to write to outfile: " + e);
+        }
     }
 }
 

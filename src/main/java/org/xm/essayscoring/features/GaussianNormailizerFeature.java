@@ -82,11 +82,12 @@ public class GaussianNormailizerFeature implements Features {
         // missing features
         assert (means.containsKey(instance.set) && stddev.containsKey(instance.set));
         double tempMean = means.get(instance.set)[0];
-        double tempStddev = stddev.get(instance)[0];
+        double tempStddev = stddev.get(instance.set)[0];
         // not zero
         assert (tempStddev != 0);
         double core = (value - tempMean) / tempStddev;
-        if (type == Type.ABS_ZSCORE) core = Math.abs(core);
+        if (type == Type.ABS_ZSCORE)
+            core = Math.abs(core);
         else if (type == Type.NORMAL_PROB)
             core = (Math.exp(-Math.pow(core, 2) / 2)) / (tempStddev * Math.sqrt(2 * Math.PI));
         values.put(name, core);

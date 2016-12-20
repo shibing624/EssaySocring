@@ -29,7 +29,7 @@ public class AverageWordLengthFeature implements Features {
             }
         }
         HashMap<String, Double> values = new HashMap<>();
-        values.put("AvergaeWordLength", new Double(sumLength / (double) numWords));
+        values.put("AverageWordLength", new Double(sumLength / (double) numWords));
         if (EssayScoring.DEBUG)
             System.out.println("Average word length for ID(" + instance.id + "): " + (sumLength / (double) numWords));
         return values;
