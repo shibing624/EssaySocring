@@ -6,7 +6,6 @@ package org.xm.essayscoring.scorer;
 public interface Scorer {
     /**
      * 计算分值
-     *
      */
     double getScore(String text);
 

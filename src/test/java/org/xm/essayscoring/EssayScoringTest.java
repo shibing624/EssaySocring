@@ -1,5 +1,6 @@
 package org.xm.essayscoring;
 
+import org.junit.Test;
 import org.xm.essayscoring.domain.EssayInstance;
 import org.xm.essayscoring.features.FeatureList;
 import org.xm.essayscoring.parser.EssayInstanceParser;
@@ -11,7 +12,8 @@ import java.util.ArrayList;
  * @author xuming
  */
 public class EssayScoringTest {
-    public static void main(String[] args) {
+    @Test
+    public void test() {
         EssayInstanceParser parser = new EssayInstanceParser();
         // Parse the input training file
         ArrayList<EssayInstance> instances = parser.parse(EssayScoring.TrainSetPath, true);

@@ -35,6 +35,7 @@ public class EssayTest {
             "算法工程师逐渐往人工智能方向发展。";
 
     public static Essay testEssay = new Essay("算法工程师",new Writer("computer"),text);
+
     @Test
     public void testString() {
         String str = testEssay.toString();

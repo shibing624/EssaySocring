@@ -14,7 +14,7 @@ public class PositiveStandardTest {
         System.out.println("PositiveStandardTest");
         PositiveStandard positiveStandard = new PositiveStandard();
         double d = positiveStandard.getScore(testEssay);
-        Assert.assertTrue(d !=0.0);
+        Assert.assertTrue(d != 0.0);
         System.out.println(d);
 
     }
