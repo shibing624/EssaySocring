@@ -12,9 +12,14 @@ import java.util.List;
 
 
 /**
+ * 在已抽取的140个特征项中，不同的特征项组合对高分作文的判别性能差别较大，但是某些特征项可以稳定地反映作文质量。
+ * 这些选出的特征项包括:句子数、平均句长、三级词汇占比、词长大于7的单词数、词长大于8的单词数、词长大于9的单词数、
+ * 单词数量、类符形符比、平均词长、动词短语的数量、动词的类符形符比、副词的类符形符比、介词类数以及代词数量。
+ *
  * @author xuming
  */
 public class FeatureList {
+
     /**
      * normalization type for the zscore function
      */
@@ -80,7 +85,7 @@ public class FeatureList {
         return instances;
     }
 
-    public static void saveAllFeatures(ArrayList<EssayInstance> instances)  {
+    public static void saveAllFeatures(ArrayList<EssayInstance> instances) {
         try {
             // generate an ARFF with real valued output class (for regression if possible)
             saveARFFRealClass(FeatureAnalyzer.filter(instances, 1), "data/training_essay1_real.arff");

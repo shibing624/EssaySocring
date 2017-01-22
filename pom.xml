@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.xm</groupId>
-    <artifactId>EssaySocring</artifactId>
+    <artifactId>essay-socring</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
     <build>
@@ -20,10 +20,10 @@
         </plugins>
     </build>
 
-    <name>EssaySocring</name>
+    <name>essay-socring</name>
     <url>https://github.com/shibing624/EssaySocring</url>
     <description>
-        EssaySocring：自动作文评分系统
+        essay-socring：自动作文评分系统
     </description>
     <organization>
         <name>xm</name>
@@ -41,6 +41,14 @@
             <email>shibing624@126.com</email>
         </developer>
     </developers>
+
+
+    <repositories>
+        <repository>
+            <id>lib_id</id>
+            <url>file://${project.basedir}/lib</url>
+        </repository>
+    </repositories>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>4.11</junit.version>
