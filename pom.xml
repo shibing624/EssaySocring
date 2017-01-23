@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.xm</groupId>
-    <artifactId>essay-socring</artifactId>
+    <artifactId>essay-scoring</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
     <build>
@@ -20,10 +20,10 @@
         </plugins>
     </build>
 
-    <name>essay-socring</name>
+    <name>essay-scoring</name>
     <url>https://github.com/shibing624/EssaySocring</url>
     <description>
-        essay-socring：自动作文评分系统
+        essay-scoring：自动作文评分系统
     </description>
     <organization>
         <name>xm</name>
@@ -37,7 +37,7 @@
     <inceptionYear>2016</inceptionYear>
     <developers>
         <developer>
-            <name>xuming</name>
+            <name>XuMing</name>
             <email>shibing624@126.com</email>
         </developer>
     </developers>
@@ -94,11 +94,6 @@
             <groupId>org.xm</groupId>
             <artifactId>similarity</artifactId>
             <version>1.1</version>
-        </dependency>
-        <dependency>
-            <groupId>nz.ac.waikato.cms.weka</groupId>
-            <artifactId>weka-stable</artifactId>
-            <version>3.8.0</version>
         </dependency>
         <!--commons-io-->
         <dependency>
