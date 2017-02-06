@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * @author xuming
  */
 public class EssayScoring {
-    public static final boolean DEBUG = false;
+    public static final boolean DEBUG = true;
     private static ArrayList<EssayInstance> instances;
     public static ArrayList<EssayInstance> getInstances() {
         return instances;
